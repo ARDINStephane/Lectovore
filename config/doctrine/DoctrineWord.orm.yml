@@ -1,0 +1,12 @@
+App\Application\Doctrine\Entity\DoctrineWord:
+    type: entity
+    table: Word
+
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        word:
+            type: string
+            length: 50

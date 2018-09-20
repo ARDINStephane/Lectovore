@@ -1,0 +1,9 @@
+<div>
+    <div>
+        {{ form_start(form,{'action': path('rand_word'), 'method': 'POST',  'attr': {'class': 'form-word-js'} }) }}
+        {{ form_row(form.writtenWord, { 'id': 'usr', 'attr': {'class': 'form-control written-word-js'}}) }}
+        <button type="submit" class="btn btn-primary btn-md ok-js">Ok</button>
+        <button type="button" class="btn btn-primary btn-md comeback-js">Revenir au mot</button>
+        {{ form_end(form) }}
+    </div>
+</div>

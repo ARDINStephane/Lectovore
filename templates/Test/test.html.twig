@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="container" >
+        <div class="block-word-js">
+            <div class="row align-items-start">
+                <div class="col-md-6 offset-md-3">
+                    <div class="word">
+                        {{ word }}
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary btn-md write-js">J'écris</button>
+        </div>
+
+        <div class="row align-items-start choose-time-js">
+            <div class="col-md-4 offset-md-3">
+                {% include 'form/choose_time.html.twig' %}
+            </div>
+        </div>
+
+        <div class="col-md-4 offset-md-3">
+            <div class="timer">Temps Restant = <span id="timer"></span></div>
+        </div>
+        <div class="col-md-4 offset-md-3 block-write-word-js">
+            {% include 'form/write_word.html.twig' %}
+        </div>
+    </div>
+    <div class="block-failed-js">
+        <h1>Raté, recommence !</h1>
+    </div>
+    <div class="finish-js">
+        <h1>
+            Partie terminée
+        </h1>
+        <div>
+            <a href="{{ path('show_results') }}">Résultats</a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        var word = "{{ word }}";
+    </script>
+    {{ parent() }}
+{% endblock %}

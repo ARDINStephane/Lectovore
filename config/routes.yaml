@@ -1,0 +1,6 @@
+rand_word:
+    path:     /
+    controller: App\Application\Word\Controller\WordController::randWord
+show_results:
+    path:     /show-results
+    controller: App\Application\Results\Controller\ResultController::showResults

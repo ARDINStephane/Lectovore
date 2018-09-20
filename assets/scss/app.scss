@@ -1,0 +1,24 @@
+$primary: purple;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+$color_head : #F6E1B1;
+
+body {
+  background: $color_head;
+  h1 {
+    color: #8959A8;
+  }
+  .word {
+    color: #8959A8;
+    font-size: 7rem;
+  }
+  a {
+    color: #FFFFFF;
+    font-size: 3rem;
+  }
+  .timer {
+    color: #8959A8;
+    font-size:20px;
+  }
+}
